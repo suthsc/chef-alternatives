@@ -9,15 +9,15 @@ if defined?(ChefSpec)
     ChefSpec::Matchers::ResourceMatcher.new(:alternatives, :auto, link_name)
   end
 
-  def remove_alternatives(link_name, path)
-    ChefSpec::Matchers::ResourceMatcher.new(:alternatives, :remove, link_name, path)
+  def remove_alternatives(link_name)
+    ChefSpec::Matchers::ResourceMatcher.new(:alternatives, :remove, link_name)
   end
 
-  def install_alternatives(link_name, link, path, priority)
-    ChefSpec::Matchers::ResourceMatcher.new(:alternatives, :install, link_name, link, path, priority)
+  def install_alternatives(link_name)
+    ChefSpec::Matchers::ResourceMatcher.new(:alternatives, :install, link_name)
   end
 
-  def set_alternatives(link_name, path)
-    ChefSpec::Matchers::ResourceMatcher.new(:alternatives, :set, link_name, path)
+  def select_alternatives(link_name)
+    ChefSpec::Matchers::ResourceMatcher.new(:alternatives, :select, link_name)
   end
 end
